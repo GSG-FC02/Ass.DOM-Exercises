@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Details for a specified link</title>
+</head>
+<body>
+    <p>
+    <a id="wcc" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://github.com/gazaskygeeks/women-crash-course">WCC</a>
+    </p>
+    <button onclick="getAttributes()">
+      Click here to get attributes value
+    </button>
+  <script>
+      let btn=document.querySelector('button')
+      let link =document.getElementById('wcc')
+      var attr= link.getAttributeNames();
+      btn.addEventListener('click',getAttributes)
+      function getAttributes(){
+        for(var i=0;i<5; i++)
+          console.log(attr[i] + " : "+link.getAttribute(attr[i]));
+    }
+  </script>
+</body>
+</html>
